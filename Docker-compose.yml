@@ -1,0 +1,13 @@
+version: "3"
+services:
+  scraping_demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scraping_demo
+    ports:
+      - 8000:8000
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/app
